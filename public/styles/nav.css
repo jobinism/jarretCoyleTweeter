@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  position: fixed;
+  background-color: #4056A1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .navbar-main {
+
+} */
+.right-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+#unique {
+  margin-right: 1.5em;
+  color: rgb(255, 0, 0);
+}
+.logo {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  margin-left:1.5em;
+  /* justify-content:baseline; */
+}
+
+.new-tweet {
+  display: flex;
+  margin-right: 1.5em;
+}
