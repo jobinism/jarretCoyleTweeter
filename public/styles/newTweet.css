@@ -26,4 +26,9 @@ button {
   border-left: transparent;
   border-right: black;
   background: transparent;
+  width: 80vw;
+}
+
+.tweetForm {
+  width: 80vw;
 }

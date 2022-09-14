@@ -1,0 +1,35 @@
+.showTweets {
+  border: 2px solid orangered;
+  width: 80vw;
+}
+
+.tweetBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountNames {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.actualTweet {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttonAndTime {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+.tweetDivide {
+  border-top: 1px solid darkgrey
+}

@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/newTweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweetContainers.css" type="text/css" />
+
 
 
 
@@ -26,6 +28,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweetbox-fx.js"></script>
+
+
   </head>
 
   <body>
@@ -53,14 +59,36 @@
     <main class="container">
       <section class="new-tweet">
         <h4>Compose Tweet</h4>
-        <form method="POST" action="/tweets">
-          <textarea name="text" class="tweet-text">What are you humming about?</textarea>
+        <form class="tweetForm" method="POST" action="/tweets">
+          <textarea name="text" placeholder="What are you humming about?" class="tweet-text"></textarea>
           <div class="styledButtonCounter">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <article class="showTweets">
+        <container class="tweetBox">
+          <div class="accountNames">
+            <h2>Screen Name</h2>
+            <h2>@ScreenName</h2>
+          </div>
+          <div class="actualTweet">
+             <p>Hello, World!</p>
+             <hr class="tweetDivide">
+          </div>
+          <div class="buttonAndTime">
+            <div class="timeTweeted">
+              <p>today @ 1:30pm</p>
+            </div>
+            <div class="socialButtons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </container>
+      </article>
     </main>
   </body>
 </html>
