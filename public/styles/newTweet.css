@@ -1,0 +1,29 @@
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-tweet {
+display: flex;
+flex-direction: column;
+}
+
+.styledButtonCounter {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+button {
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+
+.tweet-text {
+  border-top: transparent;
+  border-left: transparent;
+  border-right: black;
+  background: transparent;
+}
