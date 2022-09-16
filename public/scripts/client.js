@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const $container = $('<article class="showTweets"></article>')
 
 const escape = function (str) {
   let div = document.createElement("div");
@@ -41,7 +40,7 @@ const tweets = {
     <div class="timeTweeted">
       <h6>${timeago.format(tweet.created_at)}</h6>
     </div>
-    <div class="socialButtons">
+    <div id="socialButtons">
       <i id="flag" class="fa-solid fa-flag"></i>
       <i id="retweet" class="fa-solid fa-retweet"></i>
       <i id="heart" class="fa-solid fa-heart"></i>
@@ -110,6 +109,29 @@ const tweets = {
         console.log("error", err)
       })
       }
+
+      $("#showTweets").hover(function() {
+        $(this).css(
+            "box-shadow", "10px 10px 5px #888"
+        );
+      }, function() {
+        $(this).css(
+            "box-shadow", "0px 0px 0px #888"
+        );
+      });
+    
+      
+      $("#socialButtons").hover(function() {
+        $(this).css(
+            "color", "yellow"
+        );
+        }, function() {
+        $(this).css(
+            "color", "black"
+        );
+        });
+
+
     });
 
       

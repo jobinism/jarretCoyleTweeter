@@ -12,30 +12,19 @@
      box-sizing: inherit;
    }
    
-   /*
-    * Global layout stuff
-    */
-   
    body {
      color: #000000;
      background-color: #f4f1ec;
      font-size: 15px;
      font-family: 'Source Sans Pro', sans-serif;
    }
-   
-   
-   
-   /*
-    * Additional CSS can be defined below or in other CSS files, as per instructions
-    */
+
     main {
      margin-left: 5%;
      margin-right: 5%;
      display: flex;
-     /* width: 90vw; */
      align-items: baseline;
      justify-content: center;
-     /* justify-self: center; */
      flex-direction: column;
    }
    

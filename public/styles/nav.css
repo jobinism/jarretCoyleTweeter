@@ -30,7 +30,6 @@ nav {
   display: flex;
   font-family: 'Bungee', cursive;
   margin-left:1.5em;
-  /* justify-content:baseline; */
 }
 
 .writeTweet {
@@ -53,9 +52,6 @@ nav {
   color:rgb(255, 254, 246);
 }
 
-/* .navbar-main {
-
-} */
 .right-header {
   display: flex;
   align-items: center;
@@ -72,7 +68,6 @@ nav {
   display: flex;
   font-family: 'Bungee', cursive;
   margin-left:1.5em;
-  /* justify-content:baseline; */
 }
 
 .writeTweet {
