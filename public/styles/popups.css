@@ -1,0 +1,6 @@
+#popup {
+  display: flex;
+  border: 5px solid red;
+  align-self: center;
+  justify-items: center;
+}

@@ -3,6 +3,8 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -15,10 +17,12 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweetContainers.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/newTweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweetContainers.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/popups.css" type="text/css" />
+
 
 
 
@@ -26,6 +30,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -47,19 +52,22 @@
       
       </div>
     </nav>
+    <div id="bodyObjects">
+      <div class="headerDiv">
     <header>
       <div class ="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div class="username-main">
-          <h2>Julia McQueen</h2>
+          <h2>Jarret Coyle</h2>
       </div>
-  </header> 
-    <!-- Page-specific (main) content here -->
+  </header>
+</div> 
+   <div class="tweeters"> <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h4>Compose Tweet</h4>
+        <div id="popup"><p>Please enter an acceptable number of characters!</p></div>
+        <h2>Compose Tweet</h2>
         <form class="tweetForm" method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?" class="tweet-text"></textarea>
           <div class="styledButtonCounter">
@@ -68,39 +76,12 @@
           </div>
         </form>
       </section>
+
       <section class="tweetbox">
-          <!-- this is where tweets will be rendered -->
       </section>  
     </main>
+        </div>
+      </div>
+
   </body>
 </html>
-
-<!-- <div class="socialButtons">
-  <i class="fa-solid fa-flag"></i>
-  <i class="fa-solid fa-retweet"></i>
-  <i class="fa-solid fa-heart"></i>
-</div> -->
-
-
-
-
-<!-- <container class="tweetBox"> -->
-  <!-- <div class="accountNames">
-    <h2>Screen Name</h2>
-    <h2>@ScreenName</h2>
-  </div>
-  <div class="actualTweet">
-     <p>Hello, World!</p>
-     <hr class="tweetDivide">
-  </div>
-  <div class="buttonAndTime">
-    <div class="timeTweeted">
-      <p>today @ 1:30pm</p>
-    </div>
-    <div class="socialButtons">
-      <i class="fa-solid fa-flag"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-heart"></i>
-    </div>
-  </div> -->
-<!-- </container> -->

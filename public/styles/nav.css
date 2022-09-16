@@ -1,9 +1,53 @@
+@media only screen and (min-width: 320px) and (max-width: 960px) {
+
+
 nav {
   display: flex;
   height: 120px;
   width: 100vw;
   position: fixed;
-  background-color: #4056A1;
+  background-color: coral;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  justify-content: space-between;
+  align-items: center;
+  color:rgb(255, 254, 246);
+  font-size: 20px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#unique {
+  display: flex;
+  margin-right: 1.5em;
+  color: rgb(255, 0, 0);
+  flex-direction: column;
+
+}
+.logo {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  margin-left:1.5em;
+  /* justify-content:baseline; */
+}
+
+.writeTweet {
+  display: flex;
+  margin-right: 1.5em;
+}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  position: fixed;
+  background-color: olive;
   justify-content: space-between;
   align-items: center;
   color:rgb(255, 254, 246);
@@ -34,4 +78,6 @@ nav {
 .writeTweet {
   display: flex;
   margin-right: 1.5em;
+}
+
 }
