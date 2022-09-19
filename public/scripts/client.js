@@ -5,7 +5,7 @@
  */
 
 
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -13,19 +13,19 @@ const escape = function (str) {
 
 
 const tweets = {
-"user": {
-  "name": "Newton",
-  "avatars": "https://i.imgur.com/73hZDYK.png",
+  "user": {
+    "name": "Newton",
+    "avatars": "https://i.imgur.com/73hZDYK.png",
     "handle": "@SirIsaac"
   },
-"content": {
+  "content": {
     "text": "If I have seen further it is by standing on the shoulders of giants"
   },
-"created_at": 1461116232227
-}
+  "created_at": 1461116232227
+};
 
-  const createTweetElement = function(tweet) {
-    const $tweet = $(`
+const createTweetElement = function(tweet) {
+  const $tweet = $(`
       <article class="showTweets"> 
       <div class="accountNames">
       <div><img src="${tweet.user.avatars}" /> <h2>${tweet.user.name}</h2>
@@ -47,92 +47,92 @@ const tweets = {
     </div>
     </div>
       </article>
-    `)
-    return $tweet;
+    `);
+  return $tweet;
+};
+
+const renderTweets = function(tweets) {
+  for (const el of tweets) {
+    const $tweet = createTweetElement(el);
+    $('.tweetbox').prepend($tweet);
   }
 
-  const renderTweets = function(tweets) {
-    for (const el of tweets) {
-      const $tweet = createTweetElement(el);
-      $('.tweetbox').prepend($tweet);
-    }
+};
 
-  }
+const fetchTweets = function(action) {
+  $.get('/tweets', function(data) {
+    console.log(data);
+    action(data);
+  });
+};
 
-  const fetchTweets = function(action) {
-    $.get('/tweets', function(data) {
-      console.log(data)
-      action(data)
-    })
-  }
+const resetForm = function() {
+  $('#popup').hide();
+};
 
-  const resetForm = function() {
-    $('#popup').hide()
-  }
-
-  const validateForm = function() {
-   const tweetLength = $('.tweet-text').val().length
-   if (tweetLength > 140) {
-    $('#popup').slideDown(500)
-    $('tweet-text').empty()
+const validateForm = function() {
+  const tweetLength = $('.tweet-text').val().length;
+  if (tweetLength > 140) {
+    $('#popup').slideDown(500);
+    $('tweet-text').empty();
     return false;
-   } else if (tweetLength <= 0) {
-    $('#popup').slideDown(500)
+  } else if (tweetLength <= 0) {
+    $('#popup').slideDown(500);
     return false;
-   }
-   return true;
   }
+  return true;
+};
   
-  $(document).ready(function() {
+$(document).ready(function() {
     
-    resetForm()
+  resetForm();
 
-    fetchTweets(renderTweets);
+  fetchTweets(renderTweets);
     
 
-    $('.tweetForm').submit(function(event) {
-      event.preventDefault()
-      resetForm() 
-      if (validateForm()) { 
+  $('.tweetForm').submit(function(event) {
+    event.preventDefault();
+    resetForm();
+    if (validateForm()) {
       
-      $.ajax ({
+      $.ajax({
         type: "POST",
         url: '/tweets',
         data: $('.tweetForm').serialize(),
       })
-      .then((res) => {
-        $('.tweetbox').empty();
-        fetchTweets(renderTweets);
-        this.reset();
-      })
-      .catch((err) => {
-        console.log("error", err)
-      })
-      }
+        .then((res) => {
+          $('.tweetbox').empty();
+          fetchTweets(renderTweets);
+          this.reset();
+        })
+        .catch((err) => {
+          console.log("error", err);
+        });
+    }
 
-      $("#showTweets").hover(function() {
-        $(this).css(
-            "box-shadow", "10px 10px 5px #888"
-        );
-      }, function() {
-        $(this).css(
-            "box-shadow", "0px 0px 0px #888"
-        );
-      });
+    $("#showTweets").hover(function() {
+      $(this).css(
+        "box-shadow", "10px 10px 5px #888"
+      );
+    }, function() {
+      $(this).css(
+        "box-shadow", "0px 0px 0px #888"
+      );
+    });
     
       
-      $("#socialButtons").hover(function() {
-        $(this).css(
-            "color", "yellow"
-        );
-        }, function() {
-        $(this).css(
-            "color", "black"
-        );
-        });
-
-
+    $("#socialButtons").hover(function() {
+      $(this).css(
+        "color", "yellow"
+      );
+    }, function() {
+      $(this).css(
+        "color", "black"
+      );
     });
+
+
+  });
 
       
     

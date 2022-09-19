@@ -80,3 +80,18 @@
     border-top: 1px solid darkgrey
   }
 }
+#flag:hover {
+color: yellow;
+}
+#retweet:hover {
+  color: yellow;
+  }
+  #heart:hover {
+    color: yellow;
+    }
+    .showTweets:hover {
+      box-shadow: 10px 10px 10px black;
+    }
+    .actualTweet {
+      word-wrap: normal;
+    }
