@@ -85,13 +85,13 @@ color: yellow;
 }
 #retweet:hover {
   color: yellow;
-  }
-  #heart:hover {
+}
+#heart:hover {
     color: yellow;
-    }
-    .showTweets:hover {
+}
+.showTweets:hover {
       box-shadow: 10px 10px 10px black;
-    }
-    .actualTweet {
-      word-wrap: normal;
-    }
+}
+.actualTweet {
+      word-wrap:normal;
+}
