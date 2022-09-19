@@ -66,9 +66,9 @@
    <div class="tweeters"> <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <div id="popup"><p>Please enter an acceptable number of characters!</p></div>
+        <div id="popup"><p>Please enter an acceptable number of characters!</p></div> <!-- Pop up message -->
         <h2>Compose Tweet</h2>
-        <form class="tweetForm" method="POST" action="/tweets">
+        <form class="tweetForm" method="POST" action="/tweets"> <!--tweet submission form-->
           <textarea name="text" placeholder="What are you humming about?" class="tweet-text"></textarea>
           <div class="styledButtonCounter">
             <button type="submit">Tweet</button>
@@ -77,7 +77,7 @@
         </form>
       </section>
 
-      <section class="tweetbox">
+      <section class="tweetbox"> <!--Where tweets will be generated-->
       </section>  
     </main>
         </div>

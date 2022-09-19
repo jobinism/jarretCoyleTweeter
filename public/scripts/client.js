@@ -24,6 +24,8 @@ const tweets = {
   "created_at": 1461116232227
 };
 
+
+// Tweet creation using dummy tweet template
 const createTweetElement = function(tweet) {
   const $tweet = $(`
       <article class="showTweets"> 
@@ -51,6 +53,7 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+//Render tweets using createTweet function
 const renderTweets = function(tweets) {
   for (const el of tweets) {
     const $tweet = createTweetElement(el);
@@ -59,17 +62,18 @@ const renderTweets = function(tweets) {
 
 };
 
+//Retrieve data from tweets.json
 const fetchTweets = function(action) {
   $.get('/tweets', function(data) {
     console.log(data);
     action(data);
   });
 };
-
+//Clear form(hide popup)
 const resetForm = function() {
   $('#popup').hide();
 };
-
+//Make sure tweet is long enough and at least 1 character
 const validateForm = function() {
   const tweetLength = $('.tweet-text').val().length;
   if (tweetLength > 140) {
@@ -83,6 +87,7 @@ const validateForm = function() {
   return true;
 };
   
+//Make all of the code functional within JQuery
 $(document).ready(function() {
     
   resetForm();
